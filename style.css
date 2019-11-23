@@ -52,7 +52,8 @@ body {
 #chatLog {
     width: 100%;
     overflow: scroll;
-    height: calc(100vh - 240px - 50px);
+    /* height: calc(100vh - 240px - 50px); */
+    height: 300px;
 }
 
 .message {
