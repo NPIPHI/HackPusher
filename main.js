@@ -58,7 +58,9 @@ function postComment(user, message, staticUser) {
     let userDiv = document.createElement('div');
     userDiv.classList.add("username");
     userDiv.innerHTML = user;
-    userDiv.onclick = () => { userselect(staticUser) };
+    if(staticUser){
+        userDiv.onclick = () => { userselect(staticUser) };
+    }
     let textDiv = document.createElement('div');
     textDiv.classList.add("text");
     textDiv.innerHTML = message;
