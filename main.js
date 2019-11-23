@@ -42,6 +42,7 @@ function sendGameMessage(message){
         "message": message,
         "user": username
     });
+    activeGame.update(username, message);
 }
 
 function getGameMessage(user, message){

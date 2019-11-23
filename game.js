@@ -32,16 +32,12 @@ class testGame extends game{
         this.element.style.height = "100px";
         this.element.style.backgroundColor = "white";
         this.element.onclick = ()=>{
-            this.update(username, "1");
-            sendGameMessage("1");
+            sendGameMessage("foo");
         }
     }
     update(user, message){
-        if(user==this.user1){
-            this.element.innerHTML += '1';
-        }
-        if(user==this.user2){
-            this.element.innerHTML += '2';
+        if(user==user1 || user==user2){
+            this.element.innerHTML+=message;
         }
     }
 }
