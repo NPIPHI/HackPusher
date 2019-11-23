@@ -79,7 +79,11 @@ function sendMessage(){
 
 function startGame(other, user, message){
     if(user == staticUsername){
-        addGame(testGame, other);
+        if(message=="tictactoe"){
+            addGame(ticTacToe, other);
+        } else {
+            addGame(testGame, other);
+        }
     }
 }
 

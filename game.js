@@ -17,11 +17,11 @@ class openGame extends game{
         this.element.style.backgroundColor = "black";
         this.element.style.color = "white";
         this.element.innerHTML = "Click on someone's name to play a game with them";
-        userselect = (user)=>{addGame(testGame, user);
+        userselect = (user)=>{addGame(ticTacToe, user);
             privateChannel.trigger('client-game-init', {
                 other: staticUsername,
                 user: user,
-                message: "testGame"
+                message: "tictactoe"
             })}
     }
     update(user, message){}
