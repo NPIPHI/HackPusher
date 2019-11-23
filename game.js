@@ -36,7 +36,7 @@ class testGame extends game{
         }
     }
     update(user, message){
-        if(user==user1 || user==user2){
+        if(user==this.user1 || user==this.user2){
             this.element.innerHTML+=message;
         }
     }
