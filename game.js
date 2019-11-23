@@ -15,6 +15,8 @@ class openGame extends game{
         this.element = document.createElement("div");
         this.element.style.height = "100px";
         this.element.style.backgroundColor = "black";
+        this.element.style.color = "white";
+        this.element.innerHTML = "Click on someone's name to play a game with them";
         userselect = (user)=>{addGame(testGame, user);
             privateChannel.trigger('client-game-init', {
                 other: username,
@@ -32,7 +34,7 @@ class testGame extends game{
         this.element.style.height = "100px";
         this.element.style.backgroundColor = "white";
         this.element.onclick = ()=>{
-            sendGameMessage("foo");
+            sendGameMessage(username);
         }
     }
     update(user, message){

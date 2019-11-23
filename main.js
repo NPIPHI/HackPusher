@@ -101,11 +101,21 @@ window.onload = ()=>{
     document.getElementById("game-container").appendChild(activeGame.element);
 
     userNameInput = document.getElementById('username');
+    randUsername();
     updateUsername();
 }
 
 var userNameInput;
+
+function randUsername(){
+    names = ["llama", "monkey", "cat", "dog", "parrot"];
+    adjs = ["tall", "fast", "quirky", "yellow", "fuzzy"];
+    userNameInput.value =  adjs[Math.floor(Math.random()*adjs.length)] + ' ' + names[Math.floor(Math.random()*names.length)]
+}
+
 function updateUsername(){
-    username = userNameInput.value;
+    if(userNameInput.value){
+        username = userNameInput.value;
+    }
     requestAnimationFrame(updateUsername);
 }

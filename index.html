@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Pusher Test</title>
+    <title>Pusher Project</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
@@ -11,7 +11,8 @@
 
 <body>
     <div id="navbar">
-        <h1>Pusher Game</h1>
+        <h1>Pusher Chat</h1>
+        <h5>Global anyonomys chatroom</h5>
     </div>
     <div id="signup">
         <div>
@@ -20,11 +21,16 @@
         </div>
     </div>
     <div id="game-container"></div>
-    <div id="chatLog">
+    <div id="chat-container">
+        <div id="chat-title">
+            Chat log: 
+        </div>
+        <div id="chatLog">
 
+        </div>
     </div>
     <div class="messageInput">
-        <input class="textbox" id="text-box" type="text">
+        <input class="textbox" id="text-box" type="text" placeholder="type your message here">
         <button id="text-button">&#10004;</button>
     </div>
 </body>

@@ -19,6 +19,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+#navbar h5 {
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+}
+
 #signup {
     display: flex;
     margin: 15px 0;
