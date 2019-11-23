@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    background-color: black;
+    width: 100%;
+    padding: 20px 12.5%;
+}
+
+#navbar h1 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
