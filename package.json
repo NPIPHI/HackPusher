@@ -1,0 +1,104 @@
+{
+  "name": "Hackathon",
+  "version": "1.0.0",
+  "description": "\"# HackPusher\"",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pusher": "^3.0.0",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node serverAuth.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NPIPHI/HackPusher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NPIPHI/HackPusher/issues"
+  },
+  "homepage": "https://github.com/NPIPHI/HackPusher#readme"
+}
+{
+  "name": "Hackathon",
+  "version": "1.0.0",
+  "description": "\"# HackPusher\"",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pusher": "^3.0.0",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NPIPHI/HackPusher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NPIPHI/HackPusher/issues"
+  },
+  "homepage": "https://github.com/NPIPHI/HackPusher#readme"
+}
+{
+  "name": "Hackathon",
+  "version": "1.0.0",
+  "description": "\"# HackPusher\"",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pusher": "^3.0.0",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NPIPHI/HackPusher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NPIPHI/HackPusher/issues"
+  },
+  "homepage": "https://github.com/NPIPHI/HackPusher#readme"
+}
+{
+  "name": "Hackathon",
+  "version": "1.0.0",
+  "description": "\"# HackPusher\"",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pusher": "^3.0.0",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NPIPHI/HackPusher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NPIPHI/HackPusher/issues"
+  },
+  "homepage": "https://github.com/NPIPHI/HackPusher#readme"
+}
