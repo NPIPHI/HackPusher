@@ -16,7 +16,9 @@
 }
 
 #chatLog {
-    margin-top: 40px;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 145px);
 }
 
 .message {
