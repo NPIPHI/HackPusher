@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node serverAuth.js"
+    "start": "node serverAuth.js"
   },
   "repository": {
     "type": "git",

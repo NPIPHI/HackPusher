@@ -51,3 +51,7 @@ window.addEventListener('keydown', key=>{
         postComment("you", document.getElementById('text-box').value);
     }
 });
+
+document.getElementById('username').addEventListener("change", text=>{
+    var username = document.getElementById('username').value;
+})
