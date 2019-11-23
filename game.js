@@ -15,7 +15,6 @@ class openGame extends game{
         this.element = document.createElement("div");
         this.element.style.height = "100px";
         this.element.style.backgroundColor = "black";
-        this.element.onclick = ()=>{addGame(testGame, "1")}
         userselect = (user)=>{addGame(testGame, user);
             privateChannel.trigger('client-game-init', {
                 other: username,
