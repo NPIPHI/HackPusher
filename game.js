@@ -6,7 +6,7 @@ class game{
         this.user1 = user1;
         this.user2 = user2;
     }
-    update(user, message);
+    update(user, message){}
 }
 
 class testGame extends game{
