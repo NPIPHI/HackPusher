@@ -49,17 +49,25 @@ function postComment(user, message){
 
 function  getNumberOfUsers() { return presenceChannel.members.count; }
 
+function sendMessage(){
+    postMessage(document.getElementById('text-box').value);
+    postComment("you", document.getElementById('text-box').value);
+    document.getElementById('text-box').value = "";
+}
+
 channel.bind('my-event', data => {postComment("server", data.message)});
 privateChannel.bind('client-my-event', data=>{postComment(data.user, data.message)});
 
-window.addEventListener('keydown', key=>{
-    if(key.key=="Enter"){
-        postMessage(document.getElementById('text-box').value);
-        postComment("you", document.getElementById('text-box').value);
-        document.getElementById('text-box').value = "";
-    }
-});
-
-document.getElementById('username').addEventListener("change", ()=>{
-    username = document.getElementById('username').value;
-})
+window.onload = ()=>{
+    window.addEventListener('keydown', key=>{
+        if(key.key=="Enter"){
+            sendMessage();
+        }
+    });
+    
+    document.getElementById("text-button").onclick = sendMessage;
+    
+    document.getElementById('username').addEventListener("change", ()=>{
+        username = document.getElementById('username').value;
+    })
+}
