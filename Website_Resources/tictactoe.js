@@ -13,8 +13,8 @@ class ticTacToe extends game{
     getMouseLocation(evt) {
         var rect = this.element.getBoundingClientRect();
         var root = document.documentElement;
-        var mouseX = evt.clientX - rect.left - root.scrollLeft;
-        var mouseY = evt.clientY - rect.top - root.scrollTop;
+        var mouseX = evt.offsetX;
+        var mouseY = evt.offsetY;
         return { x: mouseX, y: mouseY };
     }
     
@@ -38,7 +38,6 @@ class ticTacToe extends game{
     }
     
     update(user, message){
-
         if(user == this.user1 || user == this.user2){
             let split = message.split(':');
             this.board[split[1]][split[0]] = this.getNext();
