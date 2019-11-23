@@ -6,12 +6,18 @@
 
 body {
     background-color: #eeffcd;
+    display: grid;
+    grid-template-areas: 'navbar' 'signup' 'gamearea' 'chat' 'messageinput';
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
 }
 
 #navbar {
     background-color: black;
     width: 100%;
     padding: 20px 12.5%;
+    grid-area: navbar;
 }
 
 #navbar h1 {
@@ -28,7 +34,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 35px;
     width: 80%;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 
 #signup {
@@ -36,10 +42,15 @@ body {
     margin: 15px 0;
     width: 100%;
     justify-content: space-around;
+    grid-area: signup;
 }
 
 #signup div span {
     font-family: 'Open Sans', sans-serif;
+}
+
+#game-container {
+    grid-area: gamearea;
 }
 
 #game-container div {
@@ -50,10 +61,19 @@ body {
     padding: 20px 30px;
 }
 
+#game-container canvas {
+    width: auto;
+    margin: 0 auto;
+}
+
+#chat-container {
+    grid-area: chat;
+    overflow-y: scroll;
+}
+
 #chatLog {
     width: 100%;
     overflow: scroll;
-    height: calc(100vh - 101px - 39px - 100px - 60px - 30px);
 }
 
 .message {
@@ -83,13 +103,10 @@ input[type=text] {
 }
 
 .messageInput {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    left: 10%;
-    margin: 10px;
+    margin: 10px auto;
     width: 80%;
     display: flex;
+    grid-area: messageinput;
 }
 
 .messageInput input[type=text] {

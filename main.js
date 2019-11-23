@@ -21,24 +21,24 @@ function addMessage(data) {
     console.log("got", data.message);
 }
 
-function postMessage(message){
+function postMessage(message) {
     privateChannel.trigger('client-my-event', {
         "message": message,
         "user": username,
         "staticUser": staticUsername
     });
-    
+
     console.log("posted", message);
 }
 
-function addGame(game, otherUser){
+function addGame(game, otherUser) {
     activeGame = new game(staticUsername, otherUser)
     games.push(activeGame);
     document.getElementById("game-container").innerHTML = "";
     document.getElementById("game-container").appendChild(activeGame.element);
 }
 
-function sendGameMessage(message){
+function sendGameMessage(message) {
     privateChannel.trigger('client-game-event', {
         "message": message,
         "user": staticUsername
@@ -46,19 +46,19 @@ function sendGameMessage(message){
     activeGame.update(staticUsername, message);
 }
 
-function getGameMessage(user, message){
+function getGameMessage(user, message) {
     activeGame.update(user, message);
 }
 
-var userselect = (user)=>{console.log(user)};
+var userselect = (user) => { console.log(user) };
 
-function postComment(user, message, staticUser){
+function postComment(user, message, staticUser) {
     let messageDiv = document.createElement('div');
     messageDiv.classList.add("message");
     let userDiv = document.createElement('div');
     userDiv.classList.add("username");
     userDiv.innerHTML = user;
-    userDiv.onclick = ()=>{userselect(staticUser)};
+    userDiv.onclick = () => { userselect(staticUser) };
     let textDiv = document.createElement('div');
     textDiv.classList.add("text");
     textDiv.innerHTML = message;
@@ -67,19 +67,19 @@ function postComment(user, message, staticUser){
     document.getElementById("chatLog").appendChild(messageDiv);
 }
 
-function  getNumberOfUsers() { return presenceChannel.members.count; }
+function getNumberOfUsers() { return presenceChannel.members.count; }
 
-function sendMessage(){
-    if(document.getElementById('text-box').value){
+function sendMessage() {
+    if (document.getElementById('text-box').value) {
         postMessage(document.getElementById('text-box').value);
         postComment("you", document.getElementById('text-box').value);
         document.getElementById('text-box').value = "";
     }
 }
 
-function startGame(other, user, message){
-    if(user == staticUsername){
-        if(message=="tictactoe"){
+function startGame(other, user, message) {
+    if (user == staticUsername) {
+        if (message == "tictactoe") {
             addGame(ticTacToe, other);
         } else {
             addGame(testGame, other);
@@ -87,19 +87,19 @@ function startGame(other, user, message){
     }
 }
 
-channel.bind('my-event', data => {postComment("server", data.message, '')});
-privateChannel.bind('client-my-event', data=>{postComment(data.user, data.message, data.staticUser)});
-privateChannel.bind('client-game-event', data=>{getGameMessage(data.user, data.message)});
-privateChannel.bind('client-game-init', data=>{startGame(data.other, data.user, data.message)});
+channel.bind('my-event', data => { postComment("server", data.message, '') });
+privateChannel.bind('client-my-event', data => { postComment(data.user, data.message, data.staticUser) });
+privateChannel.bind('client-game-event', data => { getGameMessage(data.user, data.message) });
+privateChannel.bind('client-game-init', data => { startGame(data.other, data.user, data.message) });
 
 
-window.onload = ()=>{
-    window.addEventListener('keydown', key=>{
-        if(key.key=="Enter"){
+window.onload = () => {
+    window.addEventListener('keydown', key => {
+        if (key.key == "Enter") {
             sendMessage();
         }
     });
-    
+
     document.getElementById("text-button").onclick = sendMessage;
 
     activeGame = new openGame();
@@ -115,14 +115,14 @@ const staticUsername = '' + Math.random() + ' ' + Math.random();
 
 
 
-function randUsername(){
+function randUsername() {
     names = ["llama", "monkey", "cat", "dog", "parrot"];
     adjs = ["tall", "fast", "quirky", "yellow", "fuzzy"];
-    userNameInput.value =  adjs[Math.floor(Math.random()*adjs.length)] + ' ' + names[Math.floor(Math.random()*names.length)]
+    userNameInput.value = adjs[Math.floor(Math.random() * adjs.length)] + ' ' + names[Math.floor(Math.random() * names.length)]
 }
 
-function updateUsername(){
-    if(userNameInput.value){
+function updateUsername() {
+    if (userNameInput.value) {
         username = userNameInput.value;
     }
     requestAnimationFrame(updateUsername);
