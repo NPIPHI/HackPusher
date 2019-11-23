@@ -49,6 +49,7 @@ body {
 
 .message .username {
     padding-bottom: 10px;
+    text-decoration: underline;
 }
 
 .message .text {}
