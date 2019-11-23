@@ -96,12 +96,16 @@ window.onload = ()=>{
     });
     
     document.getElementById("text-button").onclick = sendMessage;
-    
-    document.getElementById('username').addEventListener("change", ()=>{
-        username = document.getElementById('username').value;
-    })
 
     activeGame = new openGame();
     document.getElementById("game-container").appendChild(activeGame.element);
 
+    userNameInput = document.getElementById('username');
+    updateUsername();
+}
+
+var userNameInput;
+function updateUsername(){
+    username = userNameInput.value;
+    requestAnimationFrame(updateUsername);
 }
