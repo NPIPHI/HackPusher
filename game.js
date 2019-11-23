@@ -9,16 +9,39 @@ class game{
     update(user, message){}
 }
 
+class openGame extends game{
+    constructor(){
+        super('','');
+        this.element = document.createElement("div");
+        this.element.style.height = "100px";
+        this.element.style.backgroundColor = "black";
+        this.element.onclick = ()=>{addGame(testGame, "1")}
+        userselect = (user)=>{addGame(testGame, user);
+            privateChannel.trigger('client-game-init', {
+                other: username,
+                user: user,
+                message: "testGame"
+            })}
+    }
+    update(user, message){}
+}
+
 class testGame extends game{
     constructor(user1, user2){
         super(user1, user2);
         this.element = document.createElement("div");
+        this.element.style.height = "100px";
+        this.element.style.backgroundColor = "white";
+        this.element.onclick = ()=>{
+            this.update(username, "1");
+            sendGameMessage("1");
+        }
     }
     update(user, message){
-        if(user==user1){
+        if(user==this.user1){
             this.element.innerHTML += '1';
         }
-        if(user==user2){
+        if(user==this.user2){
             this.element.innerHTML += '2';
         }
     }

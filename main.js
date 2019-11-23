@@ -12,6 +12,7 @@ var channel = pusher.subscribe('my-channel');
 var privateChannel = pusher.subscribe('private-my-channel');
 var username = "anonomyus";
 var games = [];
+var activeGame;
 
 function addMessage(data) {
     let addedDiv = document.createElement("div");
@@ -30,8 +31,24 @@ function postMessage(message){
 }
 
 function addGame(game, otherUser){
-    games.push(new game(username, otherUser))
+    activeGame = new game(username, otherUser)
+    games.push(activeGame);
+    document.getElementById("game-container").innerHTML = "";
+    document.getElementById("game-container").appendChild(activeGame.element);
 }
+
+function sendGameMessage(message){
+    privateChannel.trigger('client-game-event', {
+        "message": message,
+        "user": username
+    });
+}
+
+function getGameMessage(user, message){
+    activeGame.update(user, message);
+}
+
+var userselect = (user)=>{console.log(user)};
 
 function postComment(user, message){
     let messageDiv = document.createElement('div');
@@ -39,6 +56,7 @@ function postComment(user, message){
     let userDiv = document.createElement('div');
     userDiv.classList.add("username");
     userDiv.innerHTML = user;
+    userDiv.onclick = ()=>{userselect(user)};
     let textDiv = document.createElement('div');
     textDiv.classList.add("text");
     textDiv.innerHTML = message;
@@ -55,8 +73,17 @@ function sendMessage(){
     document.getElementById('text-box').value = "";
 }
 
+function startGame(other, user, message){
+    if(user == username){
+        addGame(testGame, other);
+    }
+}
+
 channel.bind('my-event', data => {postComment("server", data.message)});
 privateChannel.bind('client-my-event', data=>{postComment(data.user, data.message)});
+privateChannel.bind('client-game-event', data=>{getGameMessage(data.user, data.message)});
+privateChannel.bind('client-game-init', data=>{startGame(data.other, data.user, data.message)});
+
 
 window.onload = ()=>{
     window.addEventListener('keydown', key=>{
@@ -70,4 +97,8 @@ window.onload = ()=>{
     document.getElementById('username').addEventListener("change", ()=>{
         username = document.getElementById('username').value;
     })
+
+    activeGame = new openGame();
+    document.getElementById("game-container").appendChild(activeGame.element);
+
 }
