@@ -29,7 +29,7 @@ class ticTacToe extends game {
     }
 
 
-    board = Array(3).fill(Array(3).fill(null));
+    board = [[], [], []];
     next = 'X';
 
     getNext() {
@@ -62,50 +62,84 @@ class ticTacToe extends game {
         //         return 'X';
         //     }
         // });
+        try {
+            if (this.board[0][0] === 'O' && this.board[0][1] === 'O' && this.board[0][2] === 'O') {
+                return 'O';
+            } else if (this.board[0][0] === 'X' && this.board[0][1] === 'X' && this.board[0][2] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
 
-        if (this.board[0][0] === 'O' && this.board[0][1] === 'O' && this.board[0][2] === 'O') {
-            return 'O';
-        } else if (this.board[0][0] === 'X' && this.board[0][1] === 'X' && this.board[0][2] === 'X') {
-            return 'X';
-        }
-        if (this.board[1][0] === 'O' && this.board[1][1] === 'O' && this.board[1][2] === 'O') {
-            return 'O';
-        } else if (this.board[1][0] === 'X' && this.board[1][1] === 'X' && this.board[1][2] === 'X') {
-            return 'X';
-        }
-        if (this.board[2][0] === 'O' && this.board[2][1] === 'O' && this.board[2][2] === 'O') {
-            return 'O';
-        } else if (this.board[2][0] === 'X' && this.board[2][1] === 'X' && this.board[2][2] === 'X') {
-            return 'X';
         }
 
+        try {
+            if (this.board[1][0] === 'O' && this.board[1][1] === 'O' && this.board[1][2] === 'O') {
+                return 'O';
+            } else if (this.board[1][0] === 'X' && this.board[1][1] === 'X' && this.board[1][2] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
 
-        if (this.board[0][0] === 'O' && this.board[1][0] === 'O' && this.board[2][0] === 'O') {
-            return 'O';
-        } else if (this.board[0][0] === 'X' && this.board[1][0] === 'X' && this.board[2][0] === 'X') {
-            return 'X';
-        }
-        if (this.board[0][1] === 'O' && this.board[1][1] === 'O' && this.board[2][1] === 'O') {
-            return 'O';
-        } else if (this.board[0][1] === 'X' && this.board[1][1] === 'X' && this.board[2][1] === 'X') {
-            return 'X';
-        }
-        if (this.board[0][2] === 'O' && this.board[1][2] === 'O' && this.board[2][2] === 'O') {
-            return 'O';
-        } else if (this.board[0][2] === 'X' && this.board[1][2] === 'X' && this.board[2][2] === 'X') {
-            return 'X';
         }
 
+        try {
+            if (this.board[2][0] === 'O' && this.board[2][1] === 'O' && this.board[2][2] === 'O') {
+                return 'O';
+            } else if (this.board[2][0] === 'X' && this.board[2][1] === 'X' && this.board[2][2] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
 
-        if (this.board[0][0] === 'O' && this.board[1][1] === 'O' && this.board[2][2] === 'O') {
-            return 'O';
-        } else if (this.board[0][0] === 'X' && this.board[1][1] === 'X' && this.board[2][2] === 'X') {
-            return 'X';
         }
-        if (this.board[2][0] === 'O' && this.board[1][1] === 'O' && this.board[0][2] === 'O') {
-            return 'O';
-        } else if (this.board[2][0] === 'X' && this.board[1][1] === 'X' && this.board[0][2] === 'X') {
-            return 'X';
+
+        try {
+            if (this.board[0][0] === 'O' && this.board[1][0] === 'O' && this.board[2][0] === 'O') {
+                return 'O';
+            } else if (this.board[0][0] === 'X' && this.board[1][0] === 'X' && this.board[2][0] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
+
+        }
+
+        try {
+            if (this.board[0][1] === 'O' && this.board[1][1] === 'O' && this.board[2][1] === 'O') {
+                return 'O';
+            } else if (this.board[0][1] === 'X' && this.board[1][1] === 'X' && this.board[2][1] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
+
+        }
+
+        try {
+            if (this.board[0][2] === 'O' && this.board[1][2] === 'O' && this.board[2][2] === 'O') {
+                return 'O';
+            } else if (this.board[0][2] === 'X' && this.board[1][2] === 'X' && this.board[2][2] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
+
+        }
+
+        try {
+            if (this.board[0][0] === 'O' && this.board[1][1] === 'O' && this.board[2][2] === 'O') {
+                return 'O';
+            } else if (this.board[0][0] === 'X' && this.board[1][1] === 'X' && this.board[2][2] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
+
+        }
+
+        try {
+            if (this.board[2][0] === 'O' && this.board[1][1] === 'O' && this.board[0][2] === 'O') {
+                return 'O';
+            } else if (this.board[2][0] === 'X' && this.board[1][1] === 'X' && this.board[0][2] === 'X') {
+                return 'X';
+            }
+        } catch (e) {
+
         }
 
         return null;
