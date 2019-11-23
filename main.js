@@ -1,15 +1,17 @@
 // Enable pusher logging - don't include this in production
 Pusher.logToConsole = true;
 
-var channel = pusher.subscribe('my-channel');
-var privateChannel = pusher.subscribe('private-my-channel');
-var username = "anonomyus";
-var games = [];
 
 var pusher = new Pusher('12786716ab78611990ac', {
     cluster: 'us2',
     forceTLS: true,
 });
+
+
+var channel = pusher.subscribe('my-channel');
+var privateChannel = pusher.subscribe('private-my-channel');
+var username = "anonomyus";
+var games = [];
 
 function addMessage(data) {
     let addedDiv = document.createElement("div");
