@@ -28,6 +28,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     width: 80%;
+    margin: 0 auto;
 }
 
 #signup {
