@@ -20,8 +20,15 @@ body {
 }
 
 #navbar h5 {
-    color: grey;
+    color: white;
     font-family: 'Open Sans', sans-serif;
+}
+
+#chat-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    width: 80%;
+    margin: 15px auto;
 }
 
 #signup {
@@ -35,10 +42,18 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+#game-container div {
+    background-color: rgba(0, 0, 0, 0.454);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding: 20px 30px;
+}
+
 #chatLog {
     width: 100%;
     overflow: scroll;
-    height: calc(100vh - 60px - 85px - 40px - 30px);
+    height: calc(100vh - 101px - 39px - 100px - 60px - 30px);
 }
 
 .message {
