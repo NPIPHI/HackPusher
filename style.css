@@ -74,6 +74,7 @@ body {
 #chatLog {
     width: 100%;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .message {

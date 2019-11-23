@@ -67,6 +67,7 @@ function postComment(user, message, staticUser) {
     messageDiv.appendChild(userDiv);
     messageDiv.appendChild(textDiv);
     document.getElementById("chatLog").appendChild(messageDiv);
+    scrollToBottom();
 }
 
 function getNumberOfUsers() { return presenceChannel.members.count; }
@@ -115,11 +116,14 @@ window.onload = () => {
 var userNameInput;
 const staticUsername = '' + Math.random() + ' ' + Math.random();
 
-
+function scrollToBottom() {
+    const scrollElement = document.getElementById("chat-container");
+    scrollElement.scrollTop = scrollElement.scrollHeight;
+}
 
 function randUsername() {
     names = ["llama", "monkey", "cat", "dog", "parrot"];
-    adjs = ["tall", "fast", "quirky", "yellow", "fuzzy"];
+    adjs = ["tall", "fast", "quirky", "yellow", "fuzzy","flaming"];
     userNameInput.value = adjs[Math.floor(Math.random() * adjs.length)] + ' ' + names[Math.floor(Math.random() * names.length)]
 }
 
