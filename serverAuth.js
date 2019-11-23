@@ -19,16 +19,18 @@ app.post('/pusher/auth', function(req, res) {
   var socketId = req.body.socket_id;
   var channel = req.body.channel_name;
   var presenceData = {
-    user_id: 'unique_user_id',
+    user_id: userID,
     user_info: {
-      name: 'Mr Channels',
+      name: 'User ' + userID,
       twitter_id: '@pusher'
     }
   };
   var auth = pusher.authenticate(socketId, channel, presenceData);
   res.send(auth);
-  console.log("user auth");
+  console.log("user auth:", "User " + userID);
+  userID++;
 });
 
+var userID = 0;
 var port = process.env.PORT || 5050;
 app.listen(port);

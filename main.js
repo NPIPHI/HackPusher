@@ -16,10 +16,14 @@ function addMessage(data) {
 function postMessage(message){
     privateChannel.trigger('client-my-event', {
         "message": message,
-        "user": "joe"
+        "user": username
     });
     
     console.log("posted", message);
+}
+
+function addGame(game, otherUser){
+    games.push(new game(username, otherUser))
 }
 
 function postComment(user, message){
@@ -38,20 +42,22 @@ function postComment(user, message){
 
 function  getNumberOfUsers() { return presenceChannel.members.count; }
 
-var channel = pusher.subscribe('my-channel');
-var privateChannel = pusher.subscribe('private-my-channel');
-var presenceChannel = pusher.subscribe('presence-ericChannel');
-
-channel.bind('my-event', data => {addMessage(data)});
+channel.bind('my-event', data => {postComment("server", data.message)});
 privateChannel.bind('client-my-event', data=>{postComment(data.user, data.message)});
 
 window.addEventListener('keydown', key=>{
     if(key.key=="Enter"){
         postMessage(document.getElementById('text-box').value);
         postComment("you", document.getElementById('text-box').value);
+        document.getElementById('text-box').value = "";
     }
 });
 
-document.getElementById('username').addEventListener("change", text=>{
-    var username = document.getElementById('username').value;
+document.getElementById('username').addEventListener("change", ()=>{
+    username = document.getElementById('username').value;
 })
+
+var channel = pusher.subscribe('my-channel');
+var privateChannel = pusher.subscribe('private-my-channel');
+var username = "anonomyus";
+var games = [];
