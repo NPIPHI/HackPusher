@@ -47,7 +47,7 @@ body {
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    padding: 20px 30px;
+    height: 306px;
 }
 
 #chatLog {
