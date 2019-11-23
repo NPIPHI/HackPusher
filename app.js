@@ -9,5 +9,5 @@ var pusher = new Pusher({
 });
 
 pusher.trigger('my-channel', 'my-event', {
-  "message": "hi"
-});
+  "message": "https://prod.liveshare.vsengsaas.visualstudio.com/join?FCB2F85B74535E8734F4C45D704A81BE26D7"
+}); 
