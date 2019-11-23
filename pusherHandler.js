@@ -8,6 +8,8 @@ var pusher = new Pusher({
   encrypted: true
 });
 
-pusher.trigger('my-channel', 'my-event', {
-  "message": "hi"
-});
+function post(message){
+    pusher.trigger('my-channel', 'my-event', {
+        "message": message
+      });
+}
