@@ -26,7 +26,9 @@ body {
 
 #chat-title {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 35px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #signup {
@@ -51,7 +53,7 @@ body {
 #chatLog {
     width: 100%;
     overflow: scroll;
-    height: calc(100vh - 60px - 85px - 40px - 30px);
+    height: calc(100vh - 101px - 39px - 100px - 60px - 30px);
 }
 
 .message {
