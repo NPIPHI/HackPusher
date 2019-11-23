@@ -19,7 +19,7 @@ class openGame extends game{
         this.element.innerHTML = "Click on someone's name to play a game with them";
         userselect = (user)=>{addGame(testGame, user);
             privateChannel.trigger('client-game-init', {
-                other: username,
+                other: staticUsername,
                 user: user,
                 message: "testGame"
             })}
