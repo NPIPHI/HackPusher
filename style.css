@@ -63,6 +63,7 @@ body {
 
 #chat-container {
     grid-area: chat;
+    overflow-y: scroll;
 }
 
 #chatLog {
