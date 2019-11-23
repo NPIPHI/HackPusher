@@ -10,6 +10,7 @@ body {
     grid-template-areas: 'navbar' 'signup' 'gamearea' 'chat' 'messageinput';
     grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
     height: 100vh;
+    overflow: hidden;
 }
 
 #navbar {
@@ -66,7 +67,7 @@ body {
 
 #chatLog {
     width: 100%;
-    overflow: scroll;
+    overflow-y: auto;
     /* height: calc(100vh - 101px - 39px - 100px - 60px - 30px); */
 }
 
