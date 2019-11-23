@@ -24,6 +24,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+#chat-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
 #signup {
     display: flex;
     margin: 15px 0;
