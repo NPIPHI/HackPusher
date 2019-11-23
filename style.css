@@ -70,7 +70,6 @@ body {
 }
 
 .message {
-    grid-area: messageinput;
     margin: 10px auto;
     width: 80%;
     padding: 10px 20px;
@@ -104,6 +103,7 @@ input[type=text] {
     margin: 10px;
     width: 80%;
     display: flex;
+    grid-area: messageinput;
 }
 
 .messageInput input[type=text] {
