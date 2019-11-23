@@ -10,7 +10,6 @@ body {
     grid-template-areas: 'navbar' 'signup' 'gamearea' 'chat' 'messageinput';
     grid-template-rows: auto auto auto 1fr auto;
     height: 100vh;
-    overflow: ;
 }
 
 #navbar {
