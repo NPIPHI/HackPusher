@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-areas: 'navbar' 'signup' 'gamearea' 'chat' 'messageinput';
     grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
+    height: 100vh;
 }
 
 #navbar {
@@ -96,7 +97,7 @@ input[type=text] {
 }
 
 .messageInput {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 80%;
     display: flex;
     grid-area: messageinput;
