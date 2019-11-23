@@ -20,7 +20,7 @@ body {
 }
 
 #navbar h5 {
-    color: grey;
+    color: white;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -33,6 +33,14 @@ body {
 
 #signup div span {
     font-family: 'Open Sans', sans-serif;
+}
+
+#game-container div {
+    background-color: rgba(0, 0, 0, 0.454);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding: 20px 30px;
 }
 
 #chatLog {

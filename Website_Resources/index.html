@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Pusher Test</title>
-    <script src="index.js"></script>
+    <title>Pusher Project</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
 </head>
 
 <body>
     <div id="navbar">
-        <h1>Pusher Game</h1>
+        <h1>Pusher Chat</h1>
+        <h5>Global anyonomys chatroom</h5>
     </div>
     <div id="signup">
         <div>
@@ -17,58 +18,16 @@
             <input type="text" id="username">
         </div>
     </div>
+    <div id="game-container">
+        <div>Click on someone's name to play a game with
+            them</div>
+    </div>
+
     <div id="chatLog">
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
-        <div class="message">
-            <div class="username">@Lampkins</div>
-            <div class="text">Die all my Uni students</div>
-        </div>
+
     </div>
     <div class="messageInput">
-        <input class="textbox" id="text-box" type="text">
+        <input class="textbox" id="text-box" type="text" placeholder="type your message here">
         <button id="text-button">&#10004;</button>
     </div>
 </body>
