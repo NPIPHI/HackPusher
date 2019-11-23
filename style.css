@@ -96,11 +96,7 @@ input[type=text] {
 }
 
 .messageInput {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    left: 10%;
-    margin: 10px;
+    margin: 0 auto;
     width: 80%;
     display: flex;
     grid-area: messageinput;
