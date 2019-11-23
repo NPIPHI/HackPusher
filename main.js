@@ -36,7 +36,6 @@ function addGame(game, otherUser) {
     games.push(activeGame);
     document.getElementById("game-container").innerHTML = "";
     document.getElementById("game-container").appendChild(activeGame.element);
-    // document.getElementById("chatLog").style.height = 'calc(100vh - 487px - 50px)';
 }
 
 function sendGameMessage(message) {

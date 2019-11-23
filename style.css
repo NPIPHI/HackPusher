@@ -61,6 +61,10 @@ body {
     padding: 20px 30px;
 }
 
+#game-container canvas {
+    margin: 0 auto;
+}
+
 #chat-container {
     grid-area: chat;
     overflow-y: scroll;
