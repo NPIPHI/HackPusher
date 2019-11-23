@@ -8,7 +8,7 @@ body {
     background-color: #eeffcd;
     display: grid;
     grid-template-areas: 'navbar' 'signup' 'gamearea' 'chat' 'messageinput';
-    grid-template-columns: 0fr 0fr 0fr 1fr 0fr;
+    grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
 }
 
 #navbar {
