@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-areas: 'navbar' 'signup' 'gamearea' 'chat' 'messageinput';
     grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: 1fr;
     height: 100vh;
 }
 
