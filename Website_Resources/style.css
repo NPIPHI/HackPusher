@@ -15,17 +15,23 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+#chatLog {
+    margin-top: 40px;
+}
+
 .message {
-    margin: 40px auto;
+    margin: 10px auto;
     width: 80%;
     padding: 10px 20px;
-    display: flexbox;
+    display: flex;
     border-top: black 1px solid;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.message .username {}
+.message .username {
+    padding-bottom: 10px;
+}
 
 .message .text {}
