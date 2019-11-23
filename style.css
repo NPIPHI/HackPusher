@@ -69,7 +69,6 @@ body {
 .message .username {
     padding-bottom: 10px;
     text-decoration: underline;
-    color: rgb(57, 0, 85);
 }
 
 .message .text {}
