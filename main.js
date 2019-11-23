@@ -68,9 +68,11 @@ function postComment(user, message){
 function  getNumberOfUsers() { return presenceChannel.members.count; }
 
 function sendMessage(){
-    postMessage(document.getElementById('text-box').value);
-    postComment("you", document.getElementById('text-box').value);
-    document.getElementById('text-box').value = "";
+    if(document.getElementById('text-box').value){
+        postMessage(document.getElementById('text-box').value);
+        postComment("you", document.getElementById('text-box').value);
+        document.getElementById('text-box').value = "";
+    }
 }
 
 function startGame(other, user, message){
