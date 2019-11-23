@@ -66,7 +66,7 @@ body {
 #chatLog {
     width: 100%;
     overflow: scroll;
-    height: calc(100vh - 101px - 39px - 100px - 60px - 30px);
+    /* height: calc(100vh - 101px - 39px - 100px - 60px - 30px); */
 }
 
 .message {
