@@ -99,6 +99,7 @@ privateChannel.bind('client-game-init', data => { startGame(data.other, data.use
 window.onload = () => {
     window.addEventListener('keydown', key => {
         if (key.key == "Enter") {
+            if(document.getElementById("text-box") === document.activeElement)
             sendMessage();
         }
     });
