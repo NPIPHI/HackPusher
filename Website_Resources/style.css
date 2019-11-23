@@ -35,3 +35,17 @@
 }
 
 .message .text {}
+
+.textbox {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    left: 10%;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+    border: 1px #828282 solid;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 80%;
+}
